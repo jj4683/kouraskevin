@@ -1,0 +1,165 @@
+x = input("What is your age?")
+y = input("What is your birth month?")
+p = input('In this year, was your birthday before or after? Respond with before or after.')
+current_year = int(2020)
+x = current_year - int(x)
+if p is "before":
+    x = x
+elif p is "after":
+    x -= 1
+a = input("Is your birthday a prime number? Respond with yes or no.")
+if a is "yes":
+    lst = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31]
+    b = input("Is your birthday an even number? Respond with yes or no.")
+    if b is "yes":
+        z = 2
+    elif b is "no":
+        lst = [3, 5, 7, 11, 13, 17, 19, 23, 29, 31]
+        u = input("Does your birthday have an odd number in the tens digit? Consider no digit or 0 as an even number. Respond with yes or no.")
+        if u is "yes":
+            lst = [11, 13, 17, 19, 31]
+            v = input("Does your birthday have a 1 in the ones digit? Respond with yes or no.")
+            if v is "yes":
+                lst = [11, 31]
+                w = input("Does your birthday have a 3 in the tens digit? Respond with yes or no.")
+                if w is "yes":
+                    z = 31
+                elif w is "no":
+                    z = 11
+            elif v is "no":
+                lst = [13, 17, 19]
+                aa = input("Is the square of your birthday between 100 and 200, between 200 and 300, or between 300 and 400? Respond with the respective ranges '100-200', '200-300', '300-400'.")
+                if aa is "100-200":
+                    z = 13
+                elif aa is "200-300":
+                    z = 17
+                elif aa is "300-400":
+                    z = 19
+        elif u is "no":
+            lst = [3, 5, 7, 23, 29]
+            ab = input("Does your number have a 2 in the tens digit? Respond with yes or no.")
+            if ab is "yes":
+                lst = [23, 29]
+                ac = input("Is the square of your number greater than 600? Respond with yes or no.")
+                if ac is "yes":
+                    z = 29
+                elif ac is "no":
+                    z = 23
+            elif ab is "no":
+                lst = [3, 5, 7]
+                ad = input("Is the square of your number between 1 and 10, 20 and 30, or 40 and 50? Respond with the ranges '1-10', '20-30', or '40-50'.")
+                if ad is "1-10":
+                    z = 3
+                elif ad is "20-30":
+                    z = 5
+                elif ad is "40-50":
+                    z = 7
+elif a is "no":
+    lst = [1, 4, 6, 8, 9, 10, 12, 14, 15, 16, 18, 20, 21, 22, 24, 25, 26, 27, 28, 30]
+    b = input("Is your birthday an even number? Respond with yes or no.")
+    if b is "yes":
+        lst = [4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30]
+        c = input("Is your birthday divisible by 3? Respond with yes or no.")
+        if c is "yes":
+            lst = [6, 12, 18, 24, 30]
+            d = input("Does your birthday have an odd number in the tens place? Respond with yes or no.")
+            if d is "yes":
+                lst = [12, 18, 30]
+                e = input("Does your birthday have a perfect square factor? Respond with yes or no.")
+                if e is "yes":
+                    lst = [12, 18]
+                    f = input("Is your birthday divisible by 4?. Respond with yes or no.")
+                    if f is "yes":
+                        z = 12
+                    elif f is "no":
+                        z = 18
+                elif e is "no":
+                    z = 30
+            if d is "no":
+                lst = [6, 24]
+                g = input("Does your birthday have 2 digits? Respond with yes or no.")
+                if g is "yes":
+                    z = 24
+                elif g is "no":
+                    z = 6
+        if c is "no":
+            lst = [4, 8, 10, 14, 16, 20, 22, 26, 28]
+            h = input("Not including the factors of 1 and itself, does your birthday have its only other two factors as prime numbers? Respond with yes or no.")
+            if h is "yes":
+                lst = [4, 10, 14, 22, 26]
+                i = input("Is the tens digit of your birthday odd? Respond with yes or no.")
+                if i is "yes":
+                    lst = [10, 14]
+                    j = input("Is your birthday divisible by 5? Respond with yes or no.")
+                    if j is "yes":
+                        z = 10
+                    elif j is "no":
+                        z = 14
+                elif i is "no":
+                    lst = [4, 22, 26]
+                    k = input("Does your birthday have two digis? Respond with yes or no.")
+                    if k is "yes":
+                        lst = [22, 26]
+                        l = input("Is your birthday divisible by 11? Respond with yes or no.")
+                        if l is "yes":
+                            z = 22
+                        elif l is "no":
+                            z = 26
+                    elif k is "no":
+                        z = 4
+            elif h is "no":
+                lst = [8, 16, 20, 28]
+                m = input("Does your birthday have a 2 in the tens digit? Respond with yes or no.")
+                if m is "yes":
+                    lst = [20, 28]
+                    n = input("Is your birthday divisible by 5? Respond with yes or no.")
+                    if n is "yes":
+                        z = 20
+                    elif n is "no":
+                        z = 28
+                elif m is "no":
+                    lst = [8, 16]
+                    o = input("Does your birthday have 2 digits? Respond with yes or no.")
+                    if o is "yes":
+                        z = 16
+                    elif o is "no":
+                        z = 8
+    elif b is "no":
+        lst = [1, 9, 15, 21, 25, 27]
+        p = input("Does your birthday have a 2 in the tens digit? Respond with yes or no.")
+        if p is "yes":
+            lst = [21, 25, 27]
+            q = input("Is your birthday divisible by 3? Respond with yes or no.")
+            if q is "yes":
+                lst = [21, 27]
+                r = input("Is your birthday divisible by 7? Respond with yes or no.")
+                if r is "yes":
+                    z = 21
+                elif r is "no":
+                    z = 27
+            elif q is "no":
+                z = 25
+        elif p is "no":
+            lst = [1, 9, 15]
+            s = input("Is your birthday divisible by 3? Respond with yes or no.")
+            if s is "yes":
+                lst = [9, 15]
+                t = input("Does your birthday have 2 digits? Respond with yes or no.")
+                if t is "yes":
+                    z = 15
+                elif t is "no":
+                    z = 9
+            elif s is "no":
+                z = 1
+lst_1 = [1, 21, 31]
+lst_2 = [2, 22]
+lst_3 = [3, 23]            
+if z in lst_1:
+    zz = "st"
+elif z in lst_2:
+    zz = "nd"
+elif z in lst_3:
+    zz = "rd"
+else:
+    zz = th
+print("You were born on the {}{} of {} {}.".format(z, zz, y, x))
